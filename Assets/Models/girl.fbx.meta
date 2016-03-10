@@ -1,0 +1,1245 @@
+fileFormatVersion: 2
+guid: bccf6838025264742b0a3e4b0caa91ac
+timeCreated: 1457123806
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Chest
+    100002: Fingers01.L
+    100004: Fingers01.R
+    100006: Fingers02.L
+    100008: Fingers02.L_end
+    100010: Fingers02.R
+    100012: Fingers02.R_end
+    100014: Foot.L
+    100016: Foot.R
+    100018: FootRoll.L
+    100020: FootRoll.R
+    100022: Girl
+    100024: //RootNode
+    100026: GirlArmature
+    100028: Hair
+    100030: Hair_end
+    100032: Hand.L
+    100034: Hand.R
+    100036: Head
+    100038: Leg pole target.L
+    100040: Leg pole target.L_end
+    100042: Leg pole target.R
+    100044: Leg pole target.R_end
+    100046: LegControl.L
+    100048: LegControl.R
+    100050: LegIK.L
+    100052: LegIK.L_end
+    100054: LegIK.R
+    100056: LegIK.R_end
+    100058: LowerArm.L
+    100060: LowerArm.R
+    100062: LowerLeg.L
+    100064: LowerLeg.R
+    100066: Neck
+    100068: Root
+    100070: Spine
+    100072: Thumb01.L
+    100074: Thumb01.R
+    100076: Thumb02.L
+    100078: Thumb02.L_end
+    100080: Thumb02.R
+    100082: Thumb02.R_end
+    100084: Toes.L
+    100086: Toes.L_end
+    100088: Toes.R
+    100090: Toes.R_end
+    100092: ToesControl.L
+    100094: ToesControl.L_end
+    100096: ToesControl.R
+    100098: ToesControl.R_end
+    100100: Torso
+    100102: UpperArm.L
+    100104: UpperArm.R
+    100106: UpperLeg.L
+    100108: UpperLeg.R
+    400000: Chest
+    400002: Fingers01.L
+    400004: Fingers01.R
+    400006: Fingers02.L
+    400008: Fingers02.L_end
+    400010: Fingers02.R
+    400012: Fingers02.R_end
+    400014: Foot.L
+    400016: Foot.R
+    400018: FootRoll.L
+    400020: FootRoll.R
+    400022: Girl
+    400024: //RootNode
+    400026: GirlArmature
+    400028: Hair
+    400030: Hair_end
+    400032: Hand.L
+    400034: Hand.R
+    400036: Head
+    400038: Leg pole target.L
+    400040: Leg pole target.L_end
+    400042: Leg pole target.R
+    400044: Leg pole target.R_end
+    400046: LegControl.L
+    400048: LegControl.R
+    400050: LegIK.L
+    400052: LegIK.L_end
+    400054: LegIK.R
+    400056: LegIK.R_end
+    400058: LowerArm.L
+    400060: LowerArm.R
+    400062: LowerLeg.L
+    400064: LowerLeg.R
+    400066: Neck
+    400068: Root
+    400070: Spine
+    400072: Thumb01.L
+    400074: Thumb01.R
+    400076: Thumb02.L
+    400078: Thumb02.L_end
+    400080: Thumb02.R
+    400082: Thumb02.R_end
+    400084: Toes.L
+    400086: Toes.L_end
+    400088: Toes.R
+    400090: Toes.R_end
+    400092: ToesControl.L
+    400094: ToesControl.L_end
+    400096: ToesControl.R
+    400098: ToesControl.R_end
+    400100: Torso
+    400102: UpperArm.L
+    400104: UpperArm.R
+    400106: UpperLeg.L
+    400108: UpperLeg.R
+    4300000: Girl
+    7400000: GirlArmature|Die
+    7400002: GirlArmature|Idle
+    7400004: GirlArmature|Walk_Blocking
+    7400006: GirlArmature|Walk_Polish_Real
+    7400008: GirlArmature|WalkForwards
+    7400010: GirlArmature|WalkRight
+    7400012: GirlArmature|WalkRightBack
+    7400014: Girl|Die
+    7400016: Girl|Idle
+    7400018: Girl|WalkForwards
+    9500000: //RootNode
+    13700000: Girl
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: GirlArmature|Idle
+      takeName: GirlArmature|Idle
+      firstFrame: 0
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Girl
+        weight: 0
+      - path: GirlArmature
+        weight: 1
+      - path: GirlArmature/Root
+        weight: 1
+      - path: GirlArmature/Root/Leg pole target.L
+        weight: 0
+      - path: GirlArmature/Root/Leg pole target.L/Leg pole target.L_end
+        weight: 0
+      - path: GirlArmature/Root/Leg pole target.R
+        weight: 0
+      - path: GirlArmature/Root/Leg pole target.R/Leg pole target.R_end
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/FootRoll.L
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/FootRoll.L/LegIK.L
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/FootRoll.L/LegIK.L/LegIK.L_end
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/ToesControl.L
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/ToesControl.L/ToesControl.L_end
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/FootRoll.R
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/FootRoll.R/LegIK.R
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/FootRoll.R/LegIK.R/LegIK.R_end
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/ToesControl.R
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/ToesControl.R/ToesControl.R_end
+        weight: 0
+      - path: GirlArmature/Root/Torso
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/Neck
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/Neck/Head
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/Neck/Head/Hair
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/Neck/Head/Hair/Hair_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Fingers01.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Fingers01.L/Fingers02.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Fingers01.L/Fingers02.L/Fingers02.L_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Thumb01.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Thumb01.L/Thumb02.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Thumb01.L/Thumb02.L/Thumb02.L_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Fingers01.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Fingers01.R/Fingers02.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Fingers01.R/Fingers02.R/Fingers02.R_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Thumb01.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Thumb01.R/Thumb02.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Thumb01.R/Thumb02.R/Thumb02.R_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/UpperLeg.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.L/LowerLeg.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.L/LowerLeg.L/Foot.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/UpperLeg.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.R/LowerLeg.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.R/LowerLeg.R/Foot.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GirlArmature|Walk_Polish_Real
+      takeName: GirlArmature|Walk_Polish_Real
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Girl
+        weight: 0
+      - path: GirlArmature
+        weight: 1
+      - path: GirlArmature/Root
+        weight: 1
+      - path: GirlArmature/Root/Leg pole target.L
+        weight: 0
+      - path: GirlArmature/Root/Leg pole target.L/Leg pole target.L_end
+        weight: 0
+      - path: GirlArmature/Root/Leg pole target.R
+        weight: 0
+      - path: GirlArmature/Root/Leg pole target.R/Leg pole target.R_end
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/FootRoll.L
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/FootRoll.L/LegIK.L
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/FootRoll.L/LegIK.L/LegIK.L_end
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/ToesControl.L
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/ToesControl.L/ToesControl.L_end
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/FootRoll.R
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/FootRoll.R/LegIK.R
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/FootRoll.R/LegIK.R/LegIK.R_end
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/ToesControl.R
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/ToesControl.R/ToesControl.R_end
+        weight: 0
+      - path: GirlArmature/Root/Torso
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/Neck
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/Neck/Head
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/Neck/Head/Hair
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/Neck/Head/Hair/Hair_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Fingers01.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Fingers01.L/Fingers02.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Fingers01.L/Fingers02.L/Fingers02.L_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Thumb01.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Thumb01.L/Thumb02.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Thumb01.L/Thumb02.L/Thumb02.L_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Fingers01.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Fingers01.R/Fingers02.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Fingers01.R/Fingers02.R/Fingers02.R_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Thumb01.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Thumb01.R/Thumb02.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Thumb01.R/Thumb02.R/Thumb02.R_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/UpperLeg.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.L/LowerLeg.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.L/LowerLeg.L/Foot.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/UpperLeg.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.R/LowerLeg.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.R/LowerLeg.R/Foot.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GirlArmature|WalkRight
+      takeName: GirlArmature|WalkRight
+      firstFrame: 0
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Girl
+        weight: 0
+      - path: GirlArmature
+        weight: 1
+      - path: GirlArmature/Root
+        weight: 1
+      - path: GirlArmature/Root/Leg pole target.L
+        weight: 0
+      - path: GirlArmature/Root/Leg pole target.L/Leg pole target.L_end
+        weight: 0
+      - path: GirlArmature/Root/Leg pole target.R
+        weight: 0
+      - path: GirlArmature/Root/Leg pole target.R/Leg pole target.R_end
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/FootRoll.L
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/FootRoll.L/LegIK.L
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/FootRoll.L/LegIK.L/LegIK.L_end
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/ToesControl.L
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/ToesControl.L/ToesControl.L_end
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/FootRoll.R
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/FootRoll.R/LegIK.R
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/FootRoll.R/LegIK.R/LegIK.R_end
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/ToesControl.R
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/ToesControl.R/ToesControl.R_end
+        weight: 0
+      - path: GirlArmature/Root/Torso
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/Neck
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/Neck/Head
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/Neck/Head/Hair
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/Neck/Head/Hair/Hair_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Fingers01.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Fingers01.L/Fingers02.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Fingers01.L/Fingers02.L/Fingers02.L_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Thumb01.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Thumb01.L/Thumb02.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Thumb01.L/Thumb02.L/Thumb02.L_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Fingers01.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Fingers01.R/Fingers02.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Fingers01.R/Fingers02.R/Fingers02.R_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Thumb01.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Thumb01.R/Thumb02.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Thumb01.R/Thumb02.R/Thumb02.R_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/UpperLeg.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.L/LowerLeg.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.L/LowerLeg.L/Foot.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/UpperLeg.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.R/LowerLeg.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.R/LowerLeg.R/Foot.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GirlArmature|WalkRightBack
+      takeName: GirlArmature|WalkRightBack
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Girl
+        weight: 0
+      - path: GirlArmature
+        weight: 1
+      - path: GirlArmature/Root
+        weight: 1
+      - path: GirlArmature/Root/Leg pole target.L
+        weight: 0
+      - path: GirlArmature/Root/Leg pole target.L/Leg pole target.L_end
+        weight: 0
+      - path: GirlArmature/Root/Leg pole target.R
+        weight: 0
+      - path: GirlArmature/Root/Leg pole target.R/Leg pole target.R_end
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/FootRoll.L
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/FootRoll.L/LegIK.L
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/FootRoll.L/LegIK.L/LegIK.L_end
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/ToesControl.L
+        weight: 0
+      - path: GirlArmature/Root/LegControl.L/ToesControl.L/ToesControl.L_end
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/FootRoll.R
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/FootRoll.R/LegIK.R
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/FootRoll.R/LegIK.R/LegIK.R_end
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/ToesControl.R
+        weight: 0
+      - path: GirlArmature/Root/LegControl.R/ToesControl.R/ToesControl.R_end
+        weight: 0
+      - path: GirlArmature/Root/Torso
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/Neck
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/Neck/Head
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/Neck/Head/Hair
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/Neck/Head/Hair/Hair_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Fingers01.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Fingers01.L/Fingers02.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Fingers01.L/Fingers02.L/Fingers02.L_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Thumb01.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Thumb01.L/Thumb02.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.L/LowerArm.L/Hand.L/Thumb01.L/Thumb02.L/Thumb02.L_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Fingers01.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Fingers01.R/Fingers02.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Fingers01.R/Fingers02.R/Fingers02.R_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Thumb01.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Thumb01.R/Thumb02.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/Spine/Chest/UpperArm.R/LowerArm.R/Hand.R/Thumb01.R/Thumb02.R/Thumb02.R_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/UpperLeg.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.L/LowerLeg.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.L/LowerLeg.L/Foot.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L/Toes.L_end
+        weight: 0
+      - path: GirlArmature/Root/Torso/UpperLeg.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.R/LowerLeg.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.R/LowerLeg.R/Foot.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
+        weight: 1
+      - path: GirlArmature/Root/Torso/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R/Toes.R_end
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.2
+    meshCompression: 3
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: Torso
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperLeg.L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperLeg.R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerLeg.L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerLeg.R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Foot.L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Foot.R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chest
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperArm.L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperArm.R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerArm.L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerArm.R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand.L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand.R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toes.L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toes.R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hair
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thumb01.L
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thumb02.L
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fingers01.L
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fingers02.L
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thumb01.R
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thumb02.R
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fingers01.R
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Fingers02.R
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: girl(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Girl
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: -0.000000030908623, z: -0.000000030908623, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+      transformModified: 1
+    - name: GirlArmature
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: 8.659561e-17, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+      transformModified: 1
+    - name: Root
+      position: {x: 0, y: -0, z: 0}
+      rotation: {x: 6.123235e-17, y: 0.00000008940697, z: 1, w: 0.000000043711392}
+      scale: {x: 0.9999997, y: 0.99999976, z: 0.9999998}
+      transformModified: 1
+    - name: Torso
+      position: {x: 1.5253342e-11, y: 1.7176668e-10, z: 0.009021525}
+      rotation: {x: 0.0000000309086, y: -0.7071068, z: -0.7071068, w: 0.000000030908605}
+      scale: {x: 1, y: 0.99999964, z: 0.9999999}
+      transformModified: 1
+    - name: Spine
+      position: {x: -1.776357e-18, y: 0.0018843516, z: 1.0587907e-25}
+      rotation: {x: -2.4395017e-23, y: -0.000000043711367, z: -5.580959e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+      transformModified: 1
+    - name: Chest
+      position: {x: -1.776357e-18, y: 0.0020649147, z: 1.0587912e-25}
+      rotation: {x: -5.169676e-24, y: 3.552713e-15, z: -1.1826866e-16, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+      transformModified: 1
+    - name: Neck
+      position: {x: -1.776357e-18, y: 0.0026860419, z: -2.5025066e-27}
+      rotation: {x: -5.1697266e-24, y: -3.5527133e-15, z: -1.182695e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+      transformModified: 1
+    - name: Head
+      position: {x: -1.776357e-18, y: 0.0009088831, z: -2.5024939e-27}
+      rotation: {x: -5.169676e-24, y: 3.552713e-15, z: -1.1826866e-16, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+      transformModified: 1
+    - name: Hair
+      position: {x: -1.7763582e-18, y: 0.002826176, z: -0.0015384502}
+      rotation: {x: 0.9984231, y: 0.000000009828612, z: -0.00000017481251, w: -0.056136392}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99998796}
+      transformModified: 1
+    - name: Hair_end
+      position: {x: -0, y: 0.0059489105, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: UpperArm.L
+      position: {x: -0.0015199968, y: 0.0024516142, z: 0.0002025118}
+      rotation: {x: -0.52308756, y: 0.48224014, z: 0.48301858, w: 0.5104085}
+      scale: {x: 0.9999999, y: 0.99999976, z: 1.0000004}
+      transformModified: 1
+    - name: LowerArm.L
+      position: {x: 4.768372e-10, y: 0.0027742519, z: 1.2107193e-10}
+      rotation: {x: 0.038739488, y: 0.0038365708, z: 0.05064195, w: 0.9979579}
+      scale: {x: 0.99999976, y: 1, z: 0.99999934}
+      transformModified: 1
+    - name: Hand.L
+      position: {x: -0, y: 0.0029018514, z: 5.5879353e-11}
+      rotation: {x: 0.039276112, y: 0.021815816, z: 0.08760848, w: 0.9951414}
+      scale: {x: 0.99999964, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: Fingers01.L
+      position: {x: 5.960465e-11, y: 0.00064856966, z: 7.45058e-10}
+      rotation: {x: -0.09477349, y: -0.0006264744, z: -0.030653495, w: 0.9950266}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+      transformModified: 1
+    - name: Fingers02.L
+      position: {x: -2.9802322e-10, y: 0.00073485944, z: -1.0244549e-10}
+      rotation: {x: 0.010466244, y: -0.00096642936, z: -0.017229507, w: 0.99979633}
+      scale: {x: 1.0000004, y: 1.0000018, z: 1.000003}
+      transformModified: 1
+    - name: Fingers02.L_end
+      position: {x: -0, y: 0.00064679753, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thumb01.L
+      position: {x: -0.00043603545, y: 0.0005248134, z: -0.00017197532}
+      rotation: {x: -0.06306334, y: -0.17555816, z: 0.32934824, w: 0.92559826}
+      scale: {x: 1, y: 1, z: 1.0000005}
+      transformModified: 1
+    - name: Thumb02.L
+      position: {x: 3.8743017e-10, y: 0.0003331135, z: 1.7881394e-10}
+      rotation: {x: -0.0012152784, y: 0.14572719, z: -0.03842254, w: 0.98857766}
+      scale: {x: 1.0000001, y: 1.0000004, z: 0.9999999}
+      transformModified: 1
+    - name: Thumb02.L_end
+      position: {x: -0, y: 0.00025949813, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: UpperArm.R
+      position: {x: 0.0015199968, y: 0.0024516142, z: 0.0002025118}
+      rotation: {x: -0.5230876, y: -0.48224017, z: -0.4830186, w: 0.51040846}
+      scale: {x: 1.0000002, y: 0.99999964, z: 1.0000005}
+      transformModified: 1
+    - name: LowerArm.R
+      position: {x: -5.364418e-10, y: 0.0027742516, z: -1.2665988e-10}
+      rotation: {x: 0.038739484, y: -0.003836512, z: -0.050641768, w: 0.99795794}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: Hand.R
+      position: {x: -1.8253922e-10, y: 0.0029018512, z: 1.6018747e-10}
+      rotation: {x: 0.03927609, y: -0.021815998, z: -0.08760836, w: 0.9951414}
+      scale: {x: 0.99999976, y: 0.99999964, z: 0.99999976}
+      transformModified: 1
+    - name: Fingers01.R
+      position: {x: -5.2154066e-11, y: 0.0006485691, z: 1.0430813e-10}
+      rotation: {x: 0.09477227, y: -0.0006268618, z: -0.030653793, w: -0.9950267}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+      transformModified: 1
+    - name: Fingers02.R
+      position: {x: 3.5762787e-10, y: 0.0007348581, z: -2.1932647e-10}
+      rotation: {x: 0.010466187, y: 0.0009663402, z: 0.017229421, w: 0.99979633}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000004}
+      transformModified: 1
+    - name: Fingers02.R_end
+      position: {x: -0, y: 0.00064679666, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Thumb01.R
+      position: {x: 0.00043603542, y: 0.00052481395, z: -0.00017197616}
+      rotation: {x: 0.0630624, y: -0.17555708, z: 0.32934767, w: -0.9255988}
+      scale: {x: 1.000002, y: 1.0000014, z: 0.9999999}
+      transformModified: 1
+    - name: Thumb02.R
+      position: {x: -0, y: 0.0003331136, z: 1.7881394e-10}
+      rotation: {x: -0.001213162, y: -0.14572378, z: 0.038424477, w: 0.9885781}
+      scale: {x: 1.0000002, y: 1.0000005, z: 0.9999999}
+      transformModified: 1
+    - name: Thumb02.R_end
+      position: {x: -0, y: 0.00025949793, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: UpperLeg.L
+      position: {x: -0.0014450697, y: 0.0000023841862, z: -0.0000033178408}
+      rotation: {x: -0.00000007452107, y: 0.09433426, z: 0.99554056, w: -0.00000000684769}
+      scale: {x: 1, y: 0.9999998, z: 1.0000068}
+      transformModified: 1
+    - name: LowerLeg.L
+      position: {x: 2.1583399e-10, y: 0.0032814576, z: -1.3038516e-10}
+      rotation: {x: -0.0000000067111423, y: -0.9887846, z: 0.14934891, w: -0.00000007344125}
+      scale: {x: 0.99999976, y: 1.0000018, z: 0.9999974}
+      transformModified: 1
+    - name: Foot.L
+      position: {x: 1.3876707e-10, y: 0.0046215113, z: -9.6973964e-11}
+      rotation: {x: -0.00000001760255, y: 0.9012577, z: -0.43328336, w: -0.000000073629366}
+      scale: {x: 1.0000002, y: 1.0000023, z: 0.9999978}
+      transformModified: 1
+    - name: Toes.L
+      position: {x: 3.5390257e-11, y: 0.0013362527, z: -4.2375173e-11}
+      rotation: {x: 0.36613405, y: 0.0000035970627, z: 0.0000014491848, w: 0.93056214}
+      scale: {x: 0.9999996, y: 0.9999985, z: 1.000001}
+      transformModified: 1
+    - name: Toes.L_end
+      position: {x: -0, y: 0.00073537056, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: UpperLeg.R
+      position: {x: 0.0014450701, y: 0.0000023841862, z: -0.0000033175877}
+      rotation: {x: -0.00000007492401, y: 0.09433427, z: 0.99554056, w: -0.0000000072434556}
+      scale: {x: 1.0000001, y: 0.99999917, z: 1.0000076}
+      transformModified: 1
+    - name: LowerLeg.R
+      position: {x: 1.862645e-10, y: 0.003281458, z: 1.9185245e-10}
+      rotation: {x: -0.000000006904273, y: -0.9887846, z: 0.14934893, w: -0.00000007490512}
+      scale: {x: 0.99999976, y: 1.0000039, z: 0.99999565}
+      transformModified: 1
+    - name: Foot.R
+      position: {x: -5.0640665e-11, y: 0.004621512, z: 5.122274e-12}
+      rotation: {x: -0.000000010798908, y: 0.90125775, z: -0.4332834, w: -0.000000061751024}
+      scale: {x: 1.0000002, y: 1.0000024, z: 0.9999982}
+      transformModified: 1
+    - name: Toes.R
+      position: {x: -1.8440185e-10, y: 0.0013362523, z: -6.891787e-11}
+      rotation: {x: 0.36613414, y: 0.0000036004185, z: 0.0000014347752, w: 0.93056214}
+      scale: {x: 0.9999997, y: 0.9999997, z: 0.99999976}
+      transformModified: 1
+    - name: Toes.R_end
+      position: {x: -0, y: 0.00073537056, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Leg pole target.L
+      position: {x: 0.0014450697, y: 0.005063234, z: 0.005822712}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+      transformModified: 1
+    - name: Leg pole target.L_end
+      position: {x: -0, y: 0.0029114648, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LegControl.L
+      position: {x: 0.0014516133, y: -0.002198369, z: 0.00019843101}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+      transformModified: 1
+    - name: FootRoll.L
+      position: {x: -0.000006543517, y: 0.0012449098, z: 0.00008626938}
+      rotation: {x: -0.00000007318986, y: -0.38268355, z: -0.92387944, w: -0.00000003898762}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1}
+      transformModified: 1
+    - name: LegIK.L
+      position: {x: 1.2251462e-10, y: 0.0013362544, z: -3.7252902e-11}
+      rotation: {x: -0.38268355, y: 0.000000073189895, z: 0.000000038987594, w: 0.92387956}
+      scale: {x: 1, y: 0.9999997, z: 0.9999998}
+      transformModified: 1
+    - name: LegIK.L_end
+      position: {x: -0, y: 0.0017782846, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ToesControl.L
+      position: {x: -0.000006543517, y: 0.0012449098, z: 0.000086268425}
+      rotation: {x: -0.017848313, y: 0.000003890433, z: -0.00000006944856, w: 0.99984074}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+      transformModified: 1
+    - name: ToesControl.L_end
+      position: {x: -0, y: 0.00073537056, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Leg pole target.R
+      position: {x: -0.0014450701, y: 0.005063234, z: 0.005822712}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+      transformModified: 1
+    - name: Leg pole target.R_end
+      position: {x: -0, y: 0.0029114648, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LegControl.R
+      position: {x: -0.0014516133, y: -0.00019836902, z: 0.00019843101}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.9999998}
+      transformModified: 1
+    - name: FootRoll.R
+      position: {x: 0.0000065430404, y: 0.0012449098, z: 0.00008626941}
+      rotation: {x: -0.0000000623332, y: -0.38268352, z: -0.9238795, w: -0.00000002458355}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+      transformModified: 1
+    - name: LegIK.R
+      position: {x: -4.031466e-11, y: 0.0013362544, z: 9.685754e-11}
+      rotation: {x: -0.38268343, y: 0.00000006010568, z: 0.000000019205862, w: 0.9238795}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: LegIK.R_end
+      position: {x: -0, y: 0.0017782846, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ToesControl.R
+      position: {x: 0.0000065430404, y: 0.0012449098, z: 0.000086268454}
+      rotation: {x: -0.017848313, y: 0.000003890433, z: -0.00000006944856, w: 0.99984074}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: ToesControl.R_end
+      position: {x: -0, y: 0.00073537056, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

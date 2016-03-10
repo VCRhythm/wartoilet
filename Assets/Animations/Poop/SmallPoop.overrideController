@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: SmallPoop
+  m_Controller: {fileID: 9100000, guid: ea523e5c10354884aa967f563379872b, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 807e754ecf922204d896528e576ddff4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 23769c2ed80fa844c965f70990a0b46d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0c1b7d631036b0d4abd95b956973718d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0c1b7d631036b0d4abd95b956973718d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 23769c2ed80fa844c965f70990a0b46d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 23769c2ed80fa844c965f70990a0b46d, type: 2}
