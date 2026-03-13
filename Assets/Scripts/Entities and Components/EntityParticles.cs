@@ -1,6 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
+using WarToilet.Interfaces;
 
-public class EntityParticles : MonoBehaviour, IEntityObserver
+namespace WarToilet.Entities
+{
+public class EntityParticles : EntityObserverBase
 {
     private ParticleSystem[] particles;
 
@@ -11,23 +14,13 @@ public class EntityParticles : MonoBehaviour, IEntityObserver
         particles = GetComponentsInChildren<ParticleSystem>();
     }
 
-    public void Die(Vector3 position)
-    {
-    }
-
-    public void Stun(Vector3 stunPosition, int health)
+    public override void Stun(Vector3 stunPosition, int health)
     {
         if (particles.Length > 0)
         {
             ChangeParticlesUpDirectionAndPlay(0, stunPosition);
         }
     }
-
-    public void UnStun() {}
-
-    public void UpdateHealth(int health) { }
-
-    public void Move(Vector3 moveVector) { }
 
     private void PlayParticles(int index)
     {
@@ -41,4 +34,5 @@ public class EntityParticles : MonoBehaviour, IEntityObserver
         PlayParticles(index);
     }
 
+}
 }

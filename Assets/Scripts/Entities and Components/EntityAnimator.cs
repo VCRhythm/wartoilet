@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
+using WarToilet.Interfaces;
+using WarToilet.Utilities;
 
-public class EntityAnimator : MonoBehaviour, IEntityObserver {
+namespace WarToilet.Entities
+{
+public class EntityAnimator : EntityObserverBase {
 
     public bool overrideAnimatorForDeath = false;
 
@@ -8,7 +12,7 @@ public class EntityAnimator : MonoBehaviour, IEntityObserver {
     private Entity entity;
     private Transform entityTransform;
     private Vector3 acceleration { get { return entityTransform.TransformDirection(localAcceleration); } }
-    private Vector3 localAcceleration { get { return new Vector3(animator.GetFloat("Direction"), 0, animator.GetFloat("Speed")) * accelerationFactor; } }
+    private Vector3 localAcceleration { get { return new Vector3(animator.GetFloat(AnimatorParams.Direction), 0, animator.GetFloat(AnimatorParams.Speed)) * accelerationFactor; } }
 
     private Vector3 velocity;
 
@@ -35,7 +39,7 @@ public class EntityAnimator : MonoBehaviour, IEntityObserver {
         }
     }
 
-    public void Move(Vector3 moveVector)
+    public override void Move(Vector3 moveVector)
     {
         Vector3 inverseMoveVector = transform.InverseTransformDirection(moveVector);
 
@@ -47,9 +51,7 @@ public class EntityAnimator : MonoBehaviour, IEntityObserver {
         entityTransform.position += velocity;
     }
 
-    public void UpdateHealth(int health) { }
-
-    public void Die(Vector3 position)
+    public override void Die(Vector3 position)
     {
         if (animator)
         {
@@ -59,27 +61,26 @@ public class EntityAnimator : MonoBehaviour, IEntityObserver {
             }
             else
             {
-                animator.SetTrigger("Die");
+                animator.SetTrigger(AnimatorParams.Die);
             }
         }
     }
 
-    public void Stun(Vector3 position, int health)
+    public override void Stun(Vector3 position, int health)
     {
         SetAnimatorValues(((transform.position - position) * 2).normalized, 1.5f);
     }
 
-    public void UnStun()
+    public override void UnStun()
     {
-        animator.SetFloat("Speed", 0);
+        animator.SetFloat(AnimatorParams.Speed, 0);
     }
 
     private void SetAnimatorValues(Vector3 moveVector, float animationSpeed)
     {
-        animator.SetFloat("Speed", moveVector.z);
-        animator.SetFloat("Direction", moveVector.x);
-        animator.SetFloat("AnimationSpeed", animationSpeed);
-        Debug.Log(animator.GetFloat("Speed"));
+        animator.SetFloat(AnimatorParams.Speed, moveVector.z);
+        animator.SetFloat(AnimatorParams.Direction, moveVector.x);
+        animator.SetFloat(AnimatorParams.AnimationSpeed, animationSpeed);
     }
 
     private void TurnTowardsTarget()
@@ -95,4 +96,5 @@ public class EntityAnimator : MonoBehaviour, IEntityObserver {
             entityTransform.rotation = Quaternion.Slerp(entityTransform.rotation, Quaternion.LookRotation(acceleration, Vector3.up), turnSpeed * Time.deltaTime);
         }
     }
+}
 }

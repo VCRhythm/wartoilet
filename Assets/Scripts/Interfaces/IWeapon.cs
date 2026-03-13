@@ -1,5 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public interface IWeapon {
-    void UpdateFromEntity(IController controller, GameObject target);
+namespace WarToilet.Interfaces
+{
+    public interface IWeapon {
+        void UpdateFromEntity(IController controller, GameObject target);
+    }
 }

@@ -1,5 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
+using WarToilet.Interfaces;
 
+namespace WarToilet.Entities
+{
 [RequireComponent(typeof(Animator))]
 
 public class EntityIK : MonoBehaviour
@@ -21,7 +24,7 @@ public class EntityIK : MonoBehaviour
         if (animator)
         {
 
-            //if the IK is active, set the position and rotation directly to the goal. 
+            //if the IK is active, set the position and rotation directly to the goal.
             if (ikActive)
             {
 
@@ -51,4 +54,5 @@ public class EntityIK : MonoBehaviour
             }
         }
     }
+}
 }

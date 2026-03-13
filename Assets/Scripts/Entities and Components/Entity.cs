@@ -1,7 +1,12 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using WarToilet.Interfaces;
+using WarToilet.Utilities;
 
+namespace WarToilet.Entities
+{
 public class Entity : PooledObject {
 
     public int maxHealth = 100;
@@ -19,11 +24,12 @@ public class Entity : PooledObject {
     protected bool isStunned = false;
     private const float stunTime = 1f;
     private const float maxSqrMoveVelocity = 16f;
+    private Coroutine stunCoroutine;
 
     protected virtual void Awake()
     {
-        controller = (IController)GetComponent(typeof(IController));
-        weapon = (IWeapon)GetComponentInChildren(typeof(IWeapon));
+        controller = GetComponent<IController>();
+        weapon = GetComponentInChildren<IWeapon>();
 
         transform.Register();
     }
@@ -96,8 +102,15 @@ public class Entity : PooledObject {
 
         isStunned = true;
 
-        CancelInvoke("UnStun");
-        Invoke("Unstun", stunTime);
+        if (stunCoroutine != null)
+            StopCoroutine(stunCoroutine);
+        stunCoroutine = StartCoroutine(UnstunAfterDelay());
+    }
+
+    private IEnumerator UnstunAfterDelay()
+    {
+        yield return new WaitForSeconds(stunTime);
+        Unstun();
     }
 
     protected virtual void Die(Vector3 damagePosition)
@@ -163,4 +176,5 @@ public class Entity : PooledObject {
         return null;
     }
 
+}
 }

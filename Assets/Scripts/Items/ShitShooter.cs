@@ -1,5 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
+using WarToilet.Interfaces;
+using WarToilet.Utilities;
 
+namespace WarToilet.Items
+{
 public class ShitShooter : MonoBehaviour, IWeapon
 {
     private ObjectPool pool;
@@ -26,4 +30,5 @@ public class ShitShooter : MonoBehaviour, IWeapon
         pool.GetTransformAndSetPosition(transform.position + transform.forward * shitStartPosition).GetComponent<Rigidbody>().AddForce((target.transform.position - transform.position).normalized * shitForce, ForceMode.Impulse);
         nextShotTime = Time.time + shotSpeed;
     }
+}
 }

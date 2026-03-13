@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
+using WarToilet.Interfaces;
 
-public class EntitySounds : MonoBehaviour, IEntityObserver {
+namespace WarToilet.Entities
+{
+public class EntitySounds : EntityObserverBase {
 
     public AudioClip[] footSteps;
     public AudioClip waterFootStep;
@@ -27,21 +30,17 @@ public class EntitySounds : MonoBehaviour, IEntityObserver {
         audioSource.Play();
     }
 
-    public void Die(Vector3 position)
+    public override void Die(Vector3 position)
     {
         audioSource.clip = deathAudio;
         audioSource.Play();
     }
 
-    public void UpdateHealth(int health) { }
-
-    public void Move(Vector3 moveVector) { }
-
-    public void Stun(Vector3 position, int health)
+    public override void Stun(Vector3 position, int health)
     {
         audioSource.clip = stunAudio;
         audioSource.Play();
     }
 
-    public void UnStun() { }
+}
 }

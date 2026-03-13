@@ -1,85 +1,93 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Linq;
+using WarToilet.Interfaces;
+using WarToilet.Utilities;
 
-public class Toilet : MonoBehaviour, IPoolObserver, ITriggerObserver {
+namespace WarToilet.Objects
+{
+    public class Toilet : MonoBehaviour, IPoolObserver, ITriggerObserver {
 
-    public int numToSpawn = 0;
+        private const float MinSpawnDelay = 1f;
+        private const float MaxSpawnDelay = 3f;
 
-    private int activeSpawns = 0;
-    private int spawnCount = 0;
-    private ObjectPool pool;
-    private Animator animator;
+        public int numToSpawn = 0;
 
-    void Awake()
-    {
-        animator = GetComponentInChildren<Animator>();
-        pool = GetComponent<ObjectPool>();
+        private int activeSpawns = 0;
+        private int spawnCount = 0;
+        private ObjectPool pool;
+        private Animator animator;
 
-        pool.RegisterObserver(this);
-
-        Trigger[] triggers = transform.parent.parent.GetComponentsInChildren<Trigger>();
-        triggers.First(x => x.type == Trigger.Type.In).Register(this);
-    }
-
-    public void EnterInTrigger(Collider collider)
-    {
-        if (spawnCount < numToSpawn)
+        void Awake()
         {
-            StartCoroutine(StartSpawning());
-        }
-        else if (activeSpawns == 0)
-        {
-            MakeDoor();
-        }
-    }
+            animator = GetComponentInChildren<Animator>();
+            pool = GetComponent<ObjectPool>();
 
-    public void EnterOutTrigger(Collider collider) { }
+            pool.RegisterObserver(this);
 
-    public void ExitOutTrigger(Collider collider) { }
-
-    public void OnPoolPop(Transform trans) {}
-
-    public void OnPoolInsert(Transform trans, int transIndex)
-    {
-        activeSpawns--;
-
-        if(activeSpawns <= 0 && numToSpawn == spawnCount)
-        {
-            MakeDoor();
-        }
-    }
-
-    private void MakeDoor()
-    {
-        animator.SetBool("IsSpawning", false);
-
-        foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
-        {
-            ps.Stop();
+            Trigger[] triggers = transform.parent.parent.GetComponentsInChildren<Trigger>();
+            triggers.First(x => x.type == Trigger.Type.In).Register(this);
         }
 
-        transform.parent.GetComponentInParent<LevelLoad>().LoadLevel();
-        animator.SetBool("IsDoor", true);
-    }
-
-    private IEnumerator StartSpawning()
-    {
-        animator.SetBool("IsSpawning", true);
-        foreach(ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
+        public void EnterInTrigger(Collider collider)
         {
-            ps.Play();
+            if (spawnCount < numToSpawn)
+            {
+                StartCoroutine(StartSpawning());
+            }
+            else if (activeSpawns == 0)
+            {
+                MakeDoor();
+            }
         }
 
-        while (spawnCount < numToSpawn)
+        public void EnterOutTrigger(Collider collider) { }
+
+        public void ExitOutTrigger(Collider collider) { }
+
+        public void OnPoolPop(Transform trans) {}
+
+        public void OnPoolInsert(Transform trans, int transIndex)
         {
-            animator.SetTrigger("Open");
-            pool.GetTransformAndSetPosition(transform.position);
+            activeSpawns--;
 
-            spawnCount++;
-            activeSpawns++;
+            if(activeSpawns <= 0 && numToSpawn == spawnCount)
+            {
+                MakeDoor();
+            }
+        }
 
-            yield return new WaitForSeconds(Random.Range(1f, 3f));
+        private void MakeDoor()
+        {
+            animator.SetBool(AnimatorParams.IsSpawning, false);
+
+            foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
+            {
+                ps.Stop();
+            }
+
+            transform.parent.GetComponentInParent<LevelLoad>().LoadLevel();
+            animator.SetBool(AnimatorParams.IsDoor, true);
+        }
+
+        private IEnumerator StartSpawning()
+        {
+            animator.SetBool(AnimatorParams.IsSpawning, true);
+            foreach(ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
+            {
+                ps.Play();
+            }
+
+            while (spawnCount < numToSpawn)
+            {
+                animator.SetTrigger(AnimatorParams.Open);
+                pool.GetTransformAndSetPosition(transform.position);
+
+                spawnCount++;
+                activeSpawns++;
+
+                yield return new WaitForSeconds(Random.Range(MinSpawnDelay, MaxSpawnDelay));
+            }
         }
     }
 }

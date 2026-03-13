@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using WarToilet.Interfaces;
+using WarToilet.Utilities;
 
-public class RagdollFollow : MonoBehaviour, IEntityObserver {
+namespace WarToilet.Entities
+{
+public class RagdollFollow : EntityObserverBase {
     public GameObject master;
 
     public Transform[] ignoreTransforms = new Transform[0];
@@ -96,30 +100,23 @@ public class RagdollFollow : MonoBehaviour, IEntityObserver {
         master.GetComponentInChildren<SkinnedMeshRenderer>().gameObject.SetActive(false);
     }
 
-    public void UpdateHealth(int health)
-    {
-    }
-
-    public void Stun(Vector3 position, int health)
+    public override void Stun(Vector3 position, int health)
     {
         mask = Mask.Stun;
         followMask = SetMask();
     }
 
-    public void UnStun()
+    public override void UnStun()
     {
         mask = Mask.None;
         followMask = SetMask();
     }
 
-    public void Die(Vector3 position)
+    public override void Die(Vector3 position)
     {
         mask = Mask.Death;
         followMask = SetMask();
     }
 
-    public void Move(Vector3 moveVector)
-    {
-
-    }
+}
 }

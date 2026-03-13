@@ -1,5 +1,7 @@
-﻿using DG.Tweening;
+using DG.Tweening;
 
+namespace WarToilet.Items
+{
 public class Swing {
 
     public enum Type
@@ -7,6 +9,17 @@ public class Swing {
         Slash,
         Full
     }
+
+    private const float SlashSpeed = 0.3f;
+    private const float FullSpeed = 0.5f;
+    private const float SlashLeftBackSwing = 300f;
+    private const float SlashRightBackSwing = 60f;
+    private const float FullLeftBackSwing = 230f;
+    private const float FullRightBackSwing = 130f;
+    private const float SlashLeftFollowThrough = 405f;
+    private const float SlashRightFollowThrough = -45f;
+    private const float FullLeftFollowThrough = 460f;
+    private const float FullRightFollowThrough = -100f;
 
     public Type type;
     public Position position;
@@ -23,7 +36,7 @@ public class Swing {
         backSwingRotationAngle = GetBackSwingRotationAngle(type, position);
         followThroughRotationAngle = GetRotationAngle(type, position);
         speed = GetSpeed(type);
-    }    
+    }
 
     private RotateMode GetRotateMode(Position position)
     {
@@ -39,11 +52,11 @@ public class Swing {
         switch(type)
         {
             case Type.Slash:
-                return 0.3f;
+                return SlashSpeed;
             case Type.Full:
-                return 0.5f;
+                return FullSpeed;
             default:
-                return 0.5f;
+                return FullSpeed;
         }
     }
 
@@ -54,20 +67,20 @@ public class Swing {
             case Type.Slash:
                 if (position == Position.Left)
                 {
-                    return 405;
+                    return SlashLeftFollowThrough;
                 }
                 else
                 {
-                    return -45;
+                    return SlashRightFollowThrough;
                 }
             case Type.Full:
                 if (position == Position.Left)
                 {
-                    return 460;
+                    return FullLeftFollowThrough;
                 }
                 else
                 {
-                    return -100;
+                    return FullRightFollowThrough;
                 }
             default:
                 return 0;
@@ -81,23 +94,24 @@ public class Swing {
             case Type.Slash:
                 if (position == Position.Left)
                 {
-                    return 300;
+                    return SlashLeftBackSwing;
                 }
                 else
                 {
-                    return 60;
+                    return SlashRightBackSwing;
                 }
             case Type.Full:
                 if (position == Position.Left)
                 {
-                    return 230;
+                    return FullLeftBackSwing;
                 }
                 else
                 {
-                    return 130;
+                    return FullRightBackSwing;
                 }
             default:
                 return 0;
         }
     }
+}
 }

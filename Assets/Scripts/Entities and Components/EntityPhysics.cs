@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
+using WarToilet.Interfaces;
 
-public class EntityPhysics : MonoBehaviour, IEntityObserver {
+namespace WarToilet.Entities
+{
+public class EntityPhysics : EntityObserverBase {
 
     public Vector3 velocity { get { return rbody.velocity; } }
 
@@ -25,7 +28,7 @@ public class EntityPhysics : MonoBehaviour, IEntityObserver {
         impactResponders = GetComponentsInChildren<ImpactResponder>();
     }
 
-    public void Stun(Vector3 hitPosition, int health)
+    public override void Stun(Vector3 hitPosition, int health)
     {
         Vector3 stunHeading = transform.position - hitPosition;
         stunHeading.y = 0;
@@ -35,17 +38,14 @@ public class EntityPhysics : MonoBehaviour, IEntityObserver {
         rbody.AddForce(stunHeading.normalized * stunImpulseForce, ForceMode.Impulse);
     }
 
-    public void UnStun() { }
-
-    public void UpdateHealth(int health) { }
-
-    public void Die(Vector3 hitPosition)
+    public override void Die(Vector3 hitPosition)
     {
         ShowImpact(transform.position - hitPosition, deathImpactEffectAngle, deathImpactTime, false);
     }
 
-    public void Move(Vector3 moveVector) { }
-    /*{
+    /*
+    public override void Move(Vector3 moveVector)
+    {
         if (moveVector != Vector3.zero && rbody.velocity.sqrMagnitude < maxSqrMoveVelocity)
         {
             rbody.AddForce(moveVector * 300f * Time.deltaTime, ForceMode.Force);
@@ -77,4 +77,5 @@ public class EntityPhysics : MonoBehaviour, IEntityObserver {
     {
         rbody.AddForce(force * transform.forward, ForceMode.Impulse);
     }
+}
 }

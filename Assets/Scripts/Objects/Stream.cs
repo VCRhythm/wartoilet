@@ -1,19 +1,24 @@
-﻿using UnityEngine;
+using UnityEngine;
+using WarToilet.Utilities;
+using WarToilet.Entities;
 
-public class Stream : MonoBehaviour {
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Player"))
+namespace WarToilet.Objects
+{
+    public class Stream : MonoBehaviour {
+        void OnTriggerEnter(Collider other)
         {
-            other.gameObject.GetEntity().InStream(true);
+            if(other.CompareTag("Player"))
+            {
+                other.gameObject.GetEntity().InStream(true);
+            }
         }
-    }
 
-    void OnTriggerExit(Collider other)
-    {
-        if(other.CompareTag("Player"))
+        void OnTriggerExit(Collider other)
         {
-            other.gameObject.GetEntity().InStream(false);
+            if(other.CompareTag("Player"))
+            {
+                other.gameObject.GetEntity().InStream(false);
+            }
         }
     }
 }
