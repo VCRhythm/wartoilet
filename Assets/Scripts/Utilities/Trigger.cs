@@ -22,7 +22,7 @@ namespace WarToilet.Utilities
 
         void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player"))
+            if (other.CompareTag(GameTags.Player))
             {
                 if(type == Type.In)
                 {
@@ -38,7 +38,7 @@ namespace WarToilet.Utilities
 
         void OnTriggerExit(Collider other)
         {
-            if(other.CompareTag("Player"))
+            if(other.CompareTag(GameTags.Player))
             {
                 if(type == Type.Out)
                 {

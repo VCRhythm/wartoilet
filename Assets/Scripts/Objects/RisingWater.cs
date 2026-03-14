@@ -6,11 +6,11 @@ namespace WarToilet.Objects
 {
     public class RisingWater : MonoBehaviour {
 
-        public float scaleTarget = 2f;
-        public float scaleTimeModifier = 1f;
+        [SerializeField] private float scaleTarget = 2f;
+        [SerializeField] private float scaleTimeModifier = 1f;
 
-        public float riseTarget = 2.2f;
-        public float riseTimeModifier = 1f;
+        [SerializeField] private float riseTarget = 2.2f;
+        [SerializeField] private float riseTimeModifier = 1f;
 
         public float Height { get { return transform.position.y; } }
 

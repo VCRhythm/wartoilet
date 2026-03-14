@@ -7,14 +7,15 @@ namespace WarToilet.Utilities
 {
     public class ObjectPool : MonoBehaviour
     {
-        public string poolName;
-        public int initialPoolSize = 10;
-        public PooledObject[] pooledObjectPrefabs;
+        [SerializeField] private string poolName;
+        [SerializeField] private int initialPoolSize = 10;
+        [SerializeField] private PooledObject[] pooledObjectPrefabs;
 
         [ReadOnly]
-        public int poolSize = 0;
-        public bool canGrow = false;
+        [SerializeField] private int poolSize = 0;
+        [SerializeField] private bool canGrow = false;
 
+        public int InitialPoolSize => initialPoolSize;
         public Stack<PooledObject>[] PooledObjects { get; private set; }
         public List<PooledObject> ActiveObjects { get; private set; }
 

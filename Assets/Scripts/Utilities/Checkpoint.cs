@@ -6,7 +6,7 @@ namespace WarToilet.Utilities
 
         void OnTriggerEnter(Collider other)
         {
-            if(other.CompareTag("Player"))
+            if(other.CompareTag(GameTags.Player))
             {
                 FindObjectOfType<PlayerSpawner>().transform.position = transform.position;
             }

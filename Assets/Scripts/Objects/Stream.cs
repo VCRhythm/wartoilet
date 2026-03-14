@@ -7,17 +7,17 @@ namespace WarToilet.Objects
     public class Stream : MonoBehaviour {
         void OnTriggerEnter(Collider other)
         {
-            if(other.CompareTag("Player"))
+            if(other.CompareTag(GameTags.Player))
             {
-                other.gameObject.GetEntity().InStream(true);
+                other.gameObject.GetEntity()?.InStream(true);
             }
         }
 
         void OnTriggerExit(Collider other)
         {
-            if(other.CompareTag("Player"))
+            if(other.CompareTag(GameTags.Player))
             {
-                other.gameObject.GetEntity().InStream(false);
+                other.gameObject.GetEntity()?.InStream(false);
             }
         }
     }

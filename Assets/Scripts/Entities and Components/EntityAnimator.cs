@@ -6,7 +6,7 @@ namespace WarToilet.Entities
 {
 public class EntityAnimator : EntityObserverBase {
 
-    public bool overrideAnimatorForDeath = false;
+    [SerializeField] private bool overrideAnimatorForDeath = false;
 
     private Animator animator;
     private Entity entity;
@@ -16,8 +16,8 @@ public class EntityAnimator : EntityObserverBase {
 
     private Vector3 velocity;
 
-    public float frictionFactor = .9f;
-    public float accelerationFactor = .01f;
+    [SerializeField] private float frictionFactor = .9f;
+    [SerializeField] private float accelerationFactor = .01f;
     private const float maxVelocitySqrMagnitude = 200f;
     private const float turnSpeed = 2f;
     private const float animateFactor = 0.25f;
@@ -87,9 +87,9 @@ public class EntityAnimator : EntityObserverBase {
     {
         if (Mathf.Abs(acceleration.x) + Mathf.Abs(acceleration.z) < 0.1f) return;
 
-        if (entity.target && entity.target.transform.position != entityTransform.position)
+        if (entity.Target && entity.Target.transform.position != entityTransform.position)
         {
-            entityTransform.rotation = Quaternion.Slerp(entityTransform.rotation, Quaternion.LookRotation(new Vector3(entity.target.transform.position.x - entityTransform.position.x, 0, entity.target.transform.position.z - entityTransform.position.z), Vector3.up), turnSpeed * Time.deltaTime);
+            entityTransform.rotation = Quaternion.Slerp(entityTransform.rotation, Quaternion.LookRotation(new Vector3(entity.Target.transform.position.x - entityTransform.position.x, 0, entity.Target.transform.position.z - entityTransform.position.z), Vector3.up), turnSpeed * Time.deltaTime);
         }
         else
         {

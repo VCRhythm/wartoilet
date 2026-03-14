@@ -33,9 +33,9 @@ public class PlayerEntity : Entity {
 
     void LateUpdate()
     {
-        if(target)
+        if(Target)
         {
-            targetingCursor.transform.position = new Vector3(target.transform.position.x, targetingHeight, target.transform.position.z);
+            targetingCursor.transform.position = new Vector3(Target.transform.position.x, targetingHeight, Target.transform.position.z);
             targetingCursor.enabled = true;
         }
         else

@@ -9,12 +9,15 @@ namespace WarToilet.Entities
 {
 public class Entity : PooledObject {
 
-    public int maxHealth = 100;
-    public string[] targetTags;
-    public string[] touchTags;
+    [SerializeField] private int maxHealth = 100;
+    [SerializeField] private string[] targetTags;
+    [SerializeField] private string[] touchTags;
 
-    [ReadOnly] public GameObject target;
-    [ReadOnly] public bool isInWater = false;
+    [ReadOnly] [SerializeField] private GameObject target;
+    [ReadOnly] [SerializeField] private bool isInWater = false;
+
+    public GameObject Target => target;
+    public bool IsInWater => isInWater;
 
     protected IController controller;
     private IWeapon weapon;
@@ -57,15 +60,17 @@ public class Entity : PooledObject {
 
     void OnTriggerEnter(Collider otherCollider)
     {
-        if(touchTags.Contains(otherCollider.tag) && otherCollider.GetDangerous().IsDangerous)
+        var dangerous = otherCollider.GetDangerous();
+        if(touchTags.Contains(otherCollider.tag) && dangerous != null && dangerous.IsDangerous)
         {
-            TakeDamage(otherCollider.GetDangerous().ImpactPoint);
+            TakeDamage(dangerous.ImpactPoint);
         }
     }
 
     void OnCollisionEnter(Collision other)
     {
-        if(touchTags.Contains(other.transform.tag) && !other.gameObject.GetEntity().isStunned)
+        var otherEntity = other.gameObject.GetEntity();
+        if(touchTags.Contains(other.transform.tag) && otherEntity != null && !otherEntity.isStunned)
         {
             TakeDamage(other.transform.position);
         }
@@ -151,7 +156,7 @@ public class Entity : PooledObject {
 
     private void FindTarget()
     {
-        if(!target || !target.GetEntity().enabled || controller.ChangeTarget())
+        if(!target || target.GetEntity() == null || !target.GetEntity().enabled || controller.ChangeTarget())
         {
             target = GetTarget();
         }

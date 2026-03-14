@@ -4,8 +4,8 @@ namespace WarToilet.Utilities
 {
     public class LevelLoad : MonoBehaviour {
 
-        public GameObject levelToLoad;
-        public Vector3 levelPosition;
+        [SerializeField] private GameObject levelToLoad;
+        [SerializeField] private Vector3 levelPosition;
 
         public void LoadLevel()
         {

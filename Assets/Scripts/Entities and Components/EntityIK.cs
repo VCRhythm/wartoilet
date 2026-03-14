@@ -9,11 +9,11 @@ public class EntityIK : MonoBehaviour
 {
     protected Animator animator;
 
-    public bool ikActive = false;
-    public Transform rightHandObj = null;
-    public Transform lookObj = null;
+    [SerializeField] private bool ikActive = false;
+    [SerializeField] private Transform rightHandObj = null;
+    [SerializeField] private Transform lookObj = null;
 
-    void Start()
+    void Awake()
     {
         animator = GetComponent<Animator>();
     }

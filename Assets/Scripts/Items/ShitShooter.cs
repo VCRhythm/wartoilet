@@ -9,8 +9,8 @@ public class ShitShooter : MonoBehaviour, IWeapon
     private ObjectPool pool;
     private float nextShotTime;
     private const float shitStartPosition = 2;
-    public float shitForce = 30f;
-    public float shotSpeed = 5f;
+    [SerializeField] private float shitForce = 30f;
+    [SerializeField] private float shotSpeed = 5f;
 
     void Awake()
     {
@@ -27,7 +27,11 @@ public class ShitShooter : MonoBehaviour, IWeapon
 
     private void ShootShot(GameObject target)
     {
-        pool.GetTransformAndSetPosition(transform.position + transform.forward * shitStartPosition).GetComponent<Rigidbody>().AddForce((target.transform.position - transform.position).normalized * shitForce, ForceMode.Impulse);
+        Transform shotTransform = pool.GetTransformAndSetPosition(transform.position + transform.forward * shitStartPosition);
+        if (shotTransform != null)
+        {
+            shotTransform.GetComponent<Rigidbody>().AddForce((target.transform.position - transform.position).normalized * shitForce, ForceMode.Impulse);
+        }
         nextShotTime = Time.time + shotSpeed;
     }
 }

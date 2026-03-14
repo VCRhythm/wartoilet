@@ -9,6 +9,8 @@ public class Shot : PooledObject, IDangerous {
 
     private const float DestroyDelay = 1f;
 
+    private const int HitSplatterIndex = 1;
+
     private ParticleSystem hitSplatter;
 
     public Vector3 ImpactPoint { get { return transform.position; } }
@@ -18,7 +20,7 @@ public class Shot : PooledObject, IDangerous {
     {
         transform.Register();
 
-        hitSplatter = GetComponentsInChildren<ParticleSystem>()[1];
+        hitSplatter = GetComponentsInChildren<ParticleSystem>()[HitSplatterIndex];
     }
 
     void OnCollisionEnter(Collision other)

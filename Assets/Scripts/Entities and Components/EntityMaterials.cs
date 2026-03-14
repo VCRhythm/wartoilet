@@ -6,7 +6,7 @@ namespace WarToilet.Entities
 {
 public class EntityMaterials : EntityObserverBase {
 
-    public Material[] shittyMaterials;
+    [SerializeField] private Material[] shittyMaterials;
 
     private Material originalMaterial;
     private SkinnedMeshRenderer meshRenderer;
@@ -38,7 +38,7 @@ public class EntityMaterials : EntityObserverBase {
         }
         else
         {
-            meshRenderer.sharedMaterial = shittyMaterials[Mathf.Clamp(maxShittinessLevel - level, 0, 3)];
+            meshRenderer.sharedMaterial = shittyMaterials[Mathf.Clamp(maxShittinessLevel - level, 0, shittyMaterials.Length - 1)];
         }
     }
 

@@ -5,10 +5,10 @@ namespace WarToilet.Entities
 {
 public class EntitySounds : EntityObserverBase {
 
-    public AudioClip[] footSteps;
-    public AudioClip waterFootStep;
-    public AudioClip stunAudio;
-    public AudioClip deathAudio;
+    [SerializeField] private AudioClip[] footSteps;
+    [SerializeField] private AudioClip waterFootStep;
+    [SerializeField] private AudioClip stunAudio;
+    [SerializeField] private AudioClip deathAudio;
 
 
     private int footStepIndex;
@@ -26,7 +26,7 @@ public class EntitySounds : EntityObserverBase {
 
     public void PlayFootstep()
     {
-        audioSource.clip = entity.isInWater ? waterFootStep : footSteps[footStepIndex++ % footSteps.Length];
+        audioSource.clip = entity.IsInWater ? waterFootStep : footSteps[footStepIndex++ % footSteps.Length];
         audioSource.Play();
     }
 

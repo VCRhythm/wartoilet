@@ -8,11 +8,11 @@ using WarToilet.Utilities;
 namespace WarToilet.Entities
 {
 public class RagdollFollow : EntityObserverBase {
-    public GameObject master;
+    [SerializeField] private GameObject master;
 
-    public Transform[] ignoreTransforms = new Transform[0];
-    public int[] stunMask;
-    public int[] deathMask;
+    [SerializeField] private Transform[] ignoreTransforms = new Transform[0];
+    [SerializeField] private int[] stunMask;
+    [SerializeField] private int[] deathMask;
 
     public enum Mask
     {
@@ -20,9 +20,11 @@ public class RagdollFollow : EntityObserverBase {
         Stun,
         Death
     }
-    public Mask mask;
+    [SerializeField] private Mask mask;
 
-    [ReadOnly] public List<Transform> masterTransforms = new List<Transform>();
+    [ReadOnly] [SerializeField] private List<Transform> masterTransforms = new List<Transform>();
+
+    private const int RootBoneOffset = 3;
 
     private int[] followMask = new int[0];
     private List<Transform> ragdollTransforms = new List<Transform>();
@@ -84,7 +86,7 @@ public class RagdollFollow : EntityObserverBase {
         Transform[] masterTrans = master.GetComponentsInChildren<Transform>();
         Transform[] ragdollTrans = GetComponentsInChildren<Transform>();
 
-        for (int i=3; i<masterTrans.Length; i++)
+        for (int i = RootBoneOffset; i < masterTrans.Length; i++)
         {
             if(!ignoreTransforms.Contains(masterTrans[i]))
             {

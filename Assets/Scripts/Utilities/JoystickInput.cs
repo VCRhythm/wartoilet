@@ -10,12 +10,12 @@ namespace WarToilet.Utilities
         public InputType inputType { get { return InputType.Joystick; } }
         public bool IsTouchInput { get { return false; } }
 
-        public float minX, maxX, minY, maxY;
-        public Vector2 speed = new Vector2(1f, 1f);
-        public bool hasCursors = false;
-        public Transform cursorPrefab;
+        [SerializeField] private float minX, maxX, minY, maxY;
+        [SerializeField] private Vector2 speed = new Vector2(1f, 1f);
+        [SerializeField] private bool hasCursors = false;
+        [SerializeField] private Transform cursorPrefab;
 
-        Dictionary<int, string> stickMapping = new Dictionary<int, string> { { 0, "Left" }, { 1, "Right" } };
+        private static readonly Dictionary<int, string> stickMapping = new Dictionary<int, string> { { 0, "Left" }, { 1, "Right" } };
 
         Vector2[] previousPosition = new Vector2[2] { Vector2.zero, Vector2.zero };
         Transform[] cursors = new Transform[2];

@@ -11,7 +11,7 @@ namespace WarToilet.Objects
         private const float MinSpawnDelay = 1f;
         private const float MaxSpawnDelay = 3f;
 
-        public int numToSpawn = 0;
+        [SerializeField] private int numToSpawn = 0;
 
         private int activeSpawns = 0;
         private int spawnCount = 0;
@@ -66,7 +66,7 @@ namespace WarToilet.Objects
                 ps.Stop();
             }
 
-            transform.parent.GetComponentInParent<LevelLoad>().LoadLevel();
+            transform.parent.GetComponentInParent<LevelLoad>()?.LoadLevel();
             animator.SetBool(AnimatorParams.IsDoor, true);
         }
 

@@ -29,7 +29,7 @@ namespace WarToilet.Utilities
     	// Use this for initialization
     	void Awake()
         {
-            GameObject.FindGameObjectWithTag(GameTags.PlayerPool).GetComponent<ObjectPool>().RegisterObserver(this);
+            GameObject.FindGameObjectWithTag(GameTags.PlayerPool)?.GetComponent<ObjectPool>()?.RegisterObserver(this);
         }
 
     	// Update is called once per frame

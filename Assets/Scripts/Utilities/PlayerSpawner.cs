@@ -23,7 +23,7 @@ namespace WarToilet.Utilities
         {
             pool = GetComponent<ObjectPool>();
             pool.RegisterObserver(this);
-            for (int i = 0; i < pool.initialPoolSize; i++)
+            for (int i = 0; i < pool.InitialPoolSize; i++)
             {
                 Transform player = pool.GetTransformAndSetPosition(transform.position + Vector3.forward * i);
                 player.GetComponent<JoystickInput>().inputAddendum = i + 1;
