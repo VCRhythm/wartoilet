@@ -1,6 +1,15 @@
-﻿using UnityEngine;
+using UnityEngine;
+using System.Collections;
+using WarToilet.Interfaces;
+using WarToilet.Utilities;
 
+namespace WarToilet.Items
+{
 public class Shot : PooledObject, IDangerous {
+
+    private const float DestroyDelay = 1f;
+
+    private const int HitSplatterIndex = 1;
 
     private ParticleSystem hitSplatter;
 
@@ -11,12 +20,19 @@ public class Shot : PooledObject, IDangerous {
     {
         transform.Register();
 
-        hitSplatter = GetComponentsInChildren<ParticleSystem>()[1];
+        hitSplatter = GetComponentsInChildren<ParticleSystem>()[HitSplatterIndex];
     }
 
     void OnCollisionEnter(Collision other)
     {
         hitSplatter.Play();
-        Invoke("Destroy", 1f);
+        StartCoroutine(DestroyAfterDelay());
     }
+
+    private IEnumerator DestroyAfterDelay()
+    {
+        yield return new WaitForSeconds(DestroyDelay);
+        Destroy();
+    }
+}
 }

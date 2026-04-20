@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
+using WarToilet.Interfaces;
+using WarToilet.Utilities;
 
+namespace WarToilet.Entities
+{
 public class PlayerEntity : Entity {
 
     private SpriteRenderer targetingCursor;
@@ -9,7 +13,7 @@ public class PlayerEntity : Entity {
     {
         base.Awake();
 
-        targetingCursor = transform.FindChild("TargetingCursor").GetComponent<SpriteRenderer>();
+        targetingCursor = transform.Find("TargetingCursor").GetComponent<SpriteRenderer>();
     }
 
     protected override void Update()
@@ -29,9 +33,9 @@ public class PlayerEntity : Entity {
 
     void LateUpdate()
     {
-        if(target)
+        if(Target)
         {
-            targetingCursor.transform.position = new Vector3(target.transform.position.x, targetingHeight, target.transform.position.z);
+            targetingCursor.transform.position = new Vector3(Target.transform.position.x, targetingHeight, Target.transform.position.z);
             targetingCursor.enabled = true;
         }
         else
@@ -45,4 +49,5 @@ public class PlayerEntity : Entity {
         TellObservers(x => x.Move(controller.GetMoveVector()));
     }
 
+}
 }

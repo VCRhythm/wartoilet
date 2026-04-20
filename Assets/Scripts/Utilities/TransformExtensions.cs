@@ -1,47 +1,58 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
+using WarToilet.Interfaces;
+using WarToilet.Entities;
 
-public static class TransformExtensions {
-    private static Dictionary<Collider, IWeapon> weaponLookupFromCollider = new Dictionary<Collider, IWeapon>();
-    private static Dictionary<Collider, IDangerous> dangerousLookupFromCollider = new Dictionary<Collider, IDangerous>();
-    private static Dictionary<GameObject, Entity> entityLookupFromGameObject = new Dictionary<GameObject, Entity>();
+namespace WarToilet.Utilities
+{
+    public static class TransformExtensions {
+        private static Dictionary<Collider, IWeapon> weaponLookupFromCollider = new Dictionary<Collider, IWeapon>();
+        private static Dictionary<Collider, IDangerous> dangerousLookupFromCollider = new Dictionary<Collider, IDangerous>();
+        private static Dictionary<GameObject, Entity> entityLookupFromGameObject = new Dictionary<GameObject, Entity>();
 
-    public static void Register(this Transform t)
-    {
-        Collider collider = t.GetComponentInChildren<Collider>();
-        IWeapon weapon = (IWeapon)t.GetComponent(typeof(IWeapon));
-        IDangerous dangerous = (IDangerous)t.GetComponent(typeof(IDangerous));
-        Entity entity = t.GetComponent<Entity>();
-
-        if(entity != null)
+        public static void Register(this Transform t)
         {
-            entityLookupFromGameObject.Add(t.gameObject, entity);
+            Collider collider = t.GetComponentInChildren<Collider>();
+            IWeapon weapon = t.GetComponent<IWeapon>();
+            IDangerous dangerous = t.GetComponent<IDangerous>();
+            Entity entity = t.GetComponent<Entity>();
+
+            if(entity != null)
+            {
+                entityLookupFromGameObject.Add(t.gameObject, entity);
+            }
+
+            if (weapon != null)
+            {
+                weaponLookupFromCollider.Add(collider, weapon);
+            }
+
+            if(dangerous != null)
+            {
+                dangerousLookupFromCollider.Add(collider, dangerous);
+            }
         }
 
-        if (weapon != null)
+        public static IDangerous GetDangerous(this Collider collider)
         {
-            weaponLookupFromCollider.Add(collider, weapon);
+            IDangerous dangerous;
+            dangerousLookupFromCollider.TryGetValue(collider, out dangerous);
+            return dangerous;
         }
 
-        if(dangerous != null)
+        public static Entity GetEntity(this GameObject go)
         {
-            dangerousLookupFromCollider.Add(collider, dangerous);
+            Entity entity;
+            entityLookupFromGameObject.TryGetValue(go, out entity);
+            return entity;
         }
-    }
 
-    public static IDangerous GetDangerous(this Collider collider)
-    {
-        return dangerousLookupFromCollider[collider];
-    }
+        public static IWeapon GetWeapon(this Collider collider)
+        {
+            IWeapon weapon;
+            weaponLookupFromCollider.TryGetValue(collider, out weapon);
+            return weapon;
+        }
 
-    public static Entity GetEntity(this GameObject go)
-    {
-        return entityLookupFromGameObject[go];
     }
-
-    public static IWeapon GetWeapon(this Collider collider)
-    {
-        return weaponLookupFromCollider[collider];
-    }
-
 }

@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using WarToilet.Interfaces;
+using WarToilet.Utilities;
 
-public class RagdollFollow : MonoBehaviour, IEntityObserver {
-    public GameObject master;
+namespace WarToilet.Entities
+{
+public class RagdollFollow : EntityObserverBase {
+    [SerializeField] private GameObject master;
 
-    public Transform[] ignoreTransforms = new Transform[0];
-    public int[] stunMask;
-    public int[] deathMask;
+    [SerializeField] private Transform[] ignoreTransforms = new Transform[0];
+    [SerializeField] private int[] stunMask;
+    [SerializeField] private int[] deathMask;
 
     public enum Mask
     {
@@ -16,9 +20,11 @@ public class RagdollFollow : MonoBehaviour, IEntityObserver {
         Stun,
         Death
     }
-    public Mask mask;
+    [SerializeField] private Mask mask;
 
-    [ReadOnly] public List<Transform> masterTransforms = new List<Transform>();
+    [ReadOnly] [SerializeField] private List<Transform> masterTransforms = new List<Transform>();
+
+    private const int RootBoneOffset = 3;
 
     private int[] followMask = new int[0];
     private List<Transform> ragdollTransforms = new List<Transform>();
@@ -80,7 +86,7 @@ public class RagdollFollow : MonoBehaviour, IEntityObserver {
         Transform[] masterTrans = master.GetComponentsInChildren<Transform>();
         Transform[] ragdollTrans = GetComponentsInChildren<Transform>();
 
-        for (int i=3; i<masterTrans.Length; i++)
+        for (int i = RootBoneOffset; i < masterTrans.Length; i++)
         {
             if(!ignoreTransforms.Contains(masterTrans[i]))
             {
@@ -96,30 +102,23 @@ public class RagdollFollow : MonoBehaviour, IEntityObserver {
         master.GetComponentInChildren<SkinnedMeshRenderer>().gameObject.SetActive(false);
     }
 
-    public void UpdateHealth(int health)
-    {
-    }
-
-    public void Stun(Vector3 position, int health)
+    public override void Stun(Vector3 position, int health)
     {
         mask = Mask.Stun;
         followMask = SetMask();
     }
 
-    public void UnStun()
+    public override void UnStun()
     {
         mask = Mask.None;
         followMask = SetMask();
     }
 
-    public void Die(Vector3 position)
+    public override void Die(Vector3 position)
     {
         mask = Mask.Death;
         followMask = SetMask();
     }
 
-    public void Move(Vector3 moveVector)
-    {
-
-    }
+}
 }

@@ -1,54 +1,58 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
+using WarToilet.Interfaces;
 
-public class Trigger : MonoBehaviour {
+namespace WarToilet.Utilities
+{
+    public class Trigger : MonoBehaviour {
 
-    public enum Type
-    {
-        In,
-        Out
-    }
-    public Type type;
-
-    private List<ITriggerObserver> observers = new List<ITriggerObserver>();
-
-    public void Register(ITriggerObserver observer)
-    {
-        observers.Add(observer);
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        public enum Type
         {
-            if(type == Type.In)
+            In,
+            Out
+        }
+        public Type type;
+
+        private List<ITriggerObserver> observers = new List<ITriggerObserver>();
+
+        public void Register(ITriggerObserver observer)
+        {
+            observers.Add(observer);
+        }
+
+        void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag(GameTags.Player))
             {
-                TellObservers((ITriggerObserver observer) => { observer.EnterInTrigger(other); });
-                Destroy(gameObject);
-            }
-            else if(type == Type.Out)
-            {
-                TellObservers((ITriggerObserver observer) => { observer.EnterOutTrigger(other); });
+                if(type == Type.In)
+                {
+                    TellObservers((ITriggerObserver observer) => { observer.EnterInTrigger(other); });
+                    Destroy(gameObject);
+                }
+                else if(type == Type.Out)
+                {
+                    TellObservers((ITriggerObserver observer) => { observer.EnterOutTrigger(other); });
+                }
             }
         }
-    }
 
-    void OnTriggerExit(Collider other)
-    {
-        if(other.CompareTag("Player"))
+        void OnTriggerExit(Collider other)
         {
-            if(type == Type.Out)
+            if(other.CompareTag(GameTags.Player))
             {
-                TellObservers((ITriggerObserver observer) => { observer.ExitOutTrigger(other); });
+                if(type == Type.Out)
+                {
+                    TellObservers((ITriggerObserver observer) => { observer.ExitOutTrigger(other); });
+                }
             }
         }
-    }
 
-    private void TellObservers(System.Action<ITriggerObserver> action)
-    {
-        for(int i = 0; i < observers.Count; i++)
+        private void TellObservers(System.Action<ITriggerObserver> action)
         {
-            action(observers[i]);
+            for(int i = 0; i < observers.Count; i++)
+            {
+                action(observers[i]);
+            }
         }
     }
 }

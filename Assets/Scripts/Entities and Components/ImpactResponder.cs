@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using DG.Tweening;
 
+namespace WarToilet.Entities
+{
 public class ImpactResponder : MonoBehaviour {
 
     public Vector3 impactEulerAngles;
@@ -35,4 +37,5 @@ public class ImpactResponder : MonoBehaviour {
             }            
         }
     }
+}
 }

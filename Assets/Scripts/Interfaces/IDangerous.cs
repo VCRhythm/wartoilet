@@ -1,6 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public interface IDangerous {
-    bool IsDangerous { get; }
-    Vector3 ImpactPoint { get; }
+namespace WarToilet.Interfaces
+{
+    public interface IDangerous {
+        bool IsDangerous { get; }
+        Vector3 ImpactPoint { get; }
+    }
 }

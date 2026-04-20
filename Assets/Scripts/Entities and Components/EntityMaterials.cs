@@ -1,8 +1,12 @@
-﻿using UnityEngine;
+using UnityEngine;
+using WarToilet.Interfaces;
+using WarToilet.Utilities;
 
-public class EntityMaterials : MonoBehaviour, IEntityObserver {
+namespace WarToilet.Entities
+{
+public class EntityMaterials : EntityObserverBase {
 
-    public Material[] shittyMaterials;
+    [SerializeField] private Material[] shittyMaterials;
 
     private Material originalMaterial;
     private SkinnedMeshRenderer meshRenderer;
@@ -12,23 +16,19 @@ public class EntityMaterials : MonoBehaviour, IEntityObserver {
     {
         GetComponent<Entity>().RegisterObserver(this);
 
-        meshRenderer = transform.FindChild("Ragdoll").GetComponentInChildren<SkinnedMeshRenderer>();
+        meshRenderer = transform.Find("Ragdoll").GetComponentInChildren<SkinnedMeshRenderer>();
         originalMaterial = meshRenderer.material;
     }
 
-    public void Stun(Vector3 position, int health)
+    public override void Stun(Vector3 position, int health)
     {
         SetShittiness(health);
     }
 
-    public void UpdateHealth(int health)
+    public override void UpdateHealth(int health)
     {
         SetShittiness(health);
     }
-
-    public void Die(Vector3 position) { }
-    public void UnStun() { }
-    public void Move(Vector3 moveVector) { }
 
     private void SetShittiness(int level)
     {
@@ -38,8 +38,9 @@ public class EntityMaterials : MonoBehaviour, IEntityObserver {
         }
         else
         {
-            meshRenderer.sharedMaterial = shittyMaterials[Mathf.Clamp(maxShittinessLevel - level, 0, 3)];
+            meshRenderer.sharedMaterial = shittyMaterials[Mathf.Clamp(maxShittinessLevel - level, 0, shittyMaterials.Length - 1)];
         }
     }
 
+}
 }

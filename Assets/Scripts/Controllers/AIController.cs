@@ -1,30 +1,29 @@
-﻿using UnityEngine;
-using System;
+using UnityEngine;
+using WarToilet.Interfaces;
+using WarToilet.Items;
 
-public class AIController : MonoBehaviour, IController
+namespace WarToilet.Controllers
 {
-    public Vector3 GetMoveVector()
+    public class AIController : MonoBehaviour, IController
     {
-        return Vector3.zero;
-    }
+        public Vector3 GetMoveVector()
+        {
+            return Vector3.zero;
+        }
 
-    public Swing GetSwing()
-    {
-        throw new NotImplementedException();
-    }
+        public Swing GetSwing()
+        {
+            return null;
+        }
 
-    public float GetWeaponPosition()
-    {
-        throw new NotImplementedException();
-    }
+        public float GetWeaponPosition()
+        {
+            return 0f;
+        }
 
-    public bool ChangeTarget()
-    {
-        return false;
-    }
-
-    public Transform GetTarget()
-    {
-        throw new NotImplementedException();
+        public bool ChangeTarget()
+        {
+            return false;
+        }
     }
 }

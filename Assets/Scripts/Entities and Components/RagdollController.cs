@@ -1,7 +1,11 @@
 ﻿#define SIMPLEFOOTIK
 using UnityEngine;
 using AnimFollow;
+using WarToilet.Interfaces;
+using WarToilet.Utilities;
 
+namespace WarToilet.Entities
+{
 //	 This kind of a state machine that takes the character through the states: colliding, falling, matching the masters pose and getting back up
 public class RagdollController : MonoBehaviour
 {
@@ -439,4 +443,5 @@ public class RagdollController : MonoBehaviour
             //animator.SetFloat(hash.speedFloat, 0f, 0f, Time.fixedDeltaTime);
         }
     }
+}
 }

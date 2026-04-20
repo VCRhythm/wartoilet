@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+using UnityEngine;
+using WarToilet.Items;
 
-public interface IController {
+namespace WarToilet.Interfaces
+{
+    public interface IController {
 
-    Vector3 GetMoveVector();
-    Swing GetSwing();
-    float GetWeaponPosition();
-    bool ChangeTarget();
+        Vector3 GetMoveVector();
+        Swing GetSwing();
+        float GetWeaponPosition();
+        bool ChangeTarget();
+    }
 }

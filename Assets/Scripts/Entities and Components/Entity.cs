@@ -1,15 +1,23 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using WarToilet.Interfaces;
+using WarToilet.Utilities;
 
+namespace WarToilet.Entities
+{
 public class Entity : PooledObject {
 
-    public int maxHealth = 100;
-    public string[] targetTags;
-    public string[] touchTags;
+    [SerializeField] private int maxHealth = 100;
+    [SerializeField] private string[] targetTags;
+    [SerializeField] private string[] touchTags;
 
-    [ReadOnly] public GameObject target;
-    [ReadOnly] public bool isInWater = false;
+    [ReadOnly] [SerializeField] private GameObject target;
+    [ReadOnly] [SerializeField] private bool isInWater = false;
+
+    public GameObject Target => target;
+    public bool IsInWater => isInWater;
 
     protected IController controller;
     private IWeapon weapon;
@@ -19,11 +27,12 @@ public class Entity : PooledObject {
     protected bool isStunned = false;
     private const float stunTime = 1f;
     private const float maxSqrMoveVelocity = 16f;
+    private Coroutine stunCoroutine;
 
     protected virtual void Awake()
     {
-        controller = (IController)GetComponent(typeof(IController));
-        weapon = (IWeapon)GetComponentInChildren(typeof(IWeapon));
+        controller = GetComponent<IController>();
+        weapon = GetComponentInChildren<IWeapon>();
 
         transform.Register();
     }
@@ -51,15 +60,17 @@ public class Entity : PooledObject {
 
     void OnTriggerEnter(Collider otherCollider)
     {
-        if(touchTags.Contains(otherCollider.tag) && otherCollider.GetDangerous().IsDangerous)
+        var dangerous = otherCollider.GetDangerous();
+        if(touchTags.Contains(otherCollider.tag) && dangerous != null && dangerous.IsDangerous)
         {
-            TakeDamage(otherCollider.GetDangerous().ImpactPoint);
+            TakeDamage(dangerous.ImpactPoint);
         }
     }
 
     void OnCollisionEnter(Collision other)
     {
-        if(touchTags.Contains(other.transform.tag) && !other.gameObject.GetEntity().isStunned)
+        var otherEntity = other.gameObject.GetEntity();
+        if(touchTags.Contains(other.transform.tag) && otherEntity != null && !otherEntity.isStunned)
         {
             TakeDamage(other.transform.position);
         }
@@ -96,8 +107,15 @@ public class Entity : PooledObject {
 
         isStunned = true;
 
-        CancelInvoke("UnStun");
-        Invoke("Unstun", stunTime);
+        if (stunCoroutine != null)
+            StopCoroutine(stunCoroutine);
+        stunCoroutine = StartCoroutine(UnstunAfterDelay());
+    }
+
+    private IEnumerator UnstunAfterDelay()
+    {
+        yield return new WaitForSeconds(stunTime);
+        Unstun();
     }
 
     protected virtual void Die(Vector3 damagePosition)
@@ -138,7 +156,7 @@ public class Entity : PooledObject {
 
     private void FindTarget()
     {
-        if(!target || !target.GetEntity().enabled || controller.ChangeTarget())
+        if(!target || target.GetEntity() == null || !target.GetEntity().enabled || controller.ChangeTarget())
         {
             target = GetTarget();
         }
@@ -163,4 +181,5 @@ public class Entity : PooledObject {
         return null;
     }
 
+}
 }

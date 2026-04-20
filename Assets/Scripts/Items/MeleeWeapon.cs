@@ -1,6 +1,10 @@
-﻿using UnityEngine;
+using UnityEngine;
 using DG.Tweening;
+using WarToilet.Interfaces;
+using WarToilet.Utilities;
 
+namespace WarToilet.Items
+{
 public enum Position
 {
     Left = -1,
@@ -16,6 +20,10 @@ public class MeleeWeapon : MonoBehaviour, IWeapon, IDangerous {
     private Transform impactPoint;
     private bool isDangerous;
 
+    private const float WeaponPositionOffset = 0.4f;
+    private const float ReturnToRestSpeed = 0.5f;
+    private const float CooldownMultiplier = 2.1f;
+
     private Vector3 velocity;
     private float smoothTime = 1f;
     private float cooldown;
@@ -30,7 +38,7 @@ public class MeleeWeapon : MonoBehaviour, IWeapon, IDangerous {
 
         audioSource = GetComponent<AudioSource>();
         trail = GetComponentInChildren<TrailRenderer>();
-        impactPoint = transform.FindChild("ImpactPoint");
+        impactPoint = transform.Find("ImpactPoint");
     }
 
     void OnTriggerEnter(Collider otherCollider)
@@ -81,7 +89,7 @@ public class MeleeWeapon : MonoBehaviour, IWeapon, IDangerous {
 
     private void MoveWeapon(float x)
     {
-        transform.localPosition = Vector3.SmoothDamp(transform.localPosition, new Vector3(0.4f * (int)position, 0, transform.localPosition.z), ref velocity, smoothTime * Time.deltaTime);
+        transform.localPosition = Vector3.SmoothDamp(transform.localPosition, new Vector3(WeaponPositionOffset * (int)position, 0, transform.localPosition.z), ref velocity, smoothTime * Time.deltaTime);
     }
 
     private void SetPosition(float x)
@@ -111,20 +119,20 @@ public class MeleeWeapon : MonoBehaviour, IWeapon, IDangerous {
         Sequence rotationSequence = DOTween.Sequence();
         rotationSequence.Append(transform.DOLocalRotate(Vector3.up * swing.backSwingRotationAngle, swing.speed, RotateMode.Fast).SetEase(Ease.InCubic).OnComplete(() => { isDangerous = true; trail.enabled = true; audioSource.Play(); }))
             .Append(transform.DOLocalRotate(Vector3.up * swing.followThroughRotationAngle, swing.speed / 2, swing.followThroughRotateMode).SetEase(Ease.InCubic).OnComplete(() => { isDangerous = false; trail.enabled = false; }))
-            .Append(transform.DOLocalRotate(Vector3.zero, 0.5f, RotateMode.Fast).SetEase(Ease.OutBack));
+            .Append(transform.DOLocalRotate(Vector3.zero, ReturnToRestSpeed, RotateMode.Fast).SetEase(Ease.OutBack));
 
         position = Position.Center;
-        cooldown = swing.speed * (3/2 + 0.6f) + Time.time;
+        cooldown = swing.speed * CooldownMultiplier + Time.time;
     }
 
     private bool CanBeDeflected(Collider otherCollider)
     {
         switch(otherCollider.tag)
         {
-            case "Weapon":
+            case GameTags.Weapon:
                 return true;
 
-            case "Enemy":
+            case GameTags.Enemy:
                 if (isDangerous)
                 {
                     return true;
@@ -133,4 +141,5 @@ public class MeleeWeapon : MonoBehaviour, IWeapon, IDangerous {
         }
         return false;
     }
+}
 }

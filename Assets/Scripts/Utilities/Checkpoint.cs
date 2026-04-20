@@ -1,13 +1,16 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public class Checkpoint : MonoBehaviour {
+namespace WarToilet.Utilities
+{
+    public class Checkpoint : MonoBehaviour {
 
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Player"))
+        void OnTriggerEnter(Collider other)
         {
-            FindObjectOfType<PlayerSpawner>().transform.position = transform.position;
+            if(other.CompareTag(GameTags.Player))
+            {
+                FindObjectOfType<PlayerSpawner>().transform.position = transform.position;
+            }
+            enabled = false;
         }
-        enabled = false;
     }
 }
